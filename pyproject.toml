@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "paid-ad-campaign-optimizer"
+version = "1.0.0"
+description = "Audit Google/Meta/TikTok ad campaigns against measurement frameworks (ROAS/CPA economics, attribution/incrementality, AIDA, A/B significance), check ad-policy compliance, and emit a prioritized optimization roadmap."
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+authors = [{name = "Paid Ad Campaign Optimizer contributors"}]
+keywords = ["advertising", "roas", "cpa", "ltv", "attribution", "incrementality", "ab-testing", "google-ads", "meta-ads", "tiktok-ads"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Marketing :: Advertising",
+    "Operating System :: OS Independent",
+]
+dependencies = []
+
+[project.optional-dependencies]
+crawl = ["httpx>=0.27"]
+crawl4ai = ["crawl4ai"]
+dev = ["pytest>=7", "pytest-cov"]
+
+[project.scripts]
+ad-knowledge-update = "tools.knowledge_updater:main"
+
+[project.urls]
+Homepage = "https://github.com/your-org/paid-ad-campaign-optimizer"
+
+[tool.setuptools.packages.find]
+include = ["paid_ad_optimizer*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

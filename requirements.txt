@@ -1,0 +1,5 @@
+# Runtime: zero required dependencies (pure stdlib engine).
+# Optional crawling backend for the weekly knowledge updater:
+#   pip install -e ".[crawl]"   -> enables httpx-based fetching in tools/knowledge_updater.py
+# Tests:
+#   pip install -e ".[dev]" && pytest

@@ -1,0 +1,11 @@
+{
+  "_comment": "Sources queried by tools/knowledge_updater.py. Override via --sources <file>.",
+  "sources": [
+    {"name": "Google Ads Help", "url": "https://support.google.com/google-ads/"},
+    {"name": "Meta Business", "url": "https://www.facebook.com/business/news"},
+    {"name": "TikTok For Business", "url": "https://business.tiktok.com/news"},
+    {"name": "MSI", "url": "https://www.msi.org/articles/"},
+    {"name": "IAB", "url": "https://www.iab.com/insights/"},
+    {"name": "ARF", "url": "https://thearf.org/research/"}
+  ]
+}
